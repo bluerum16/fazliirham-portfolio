@@ -4,52 +4,240 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Irham's Portfolio</title>
-    <link rel="stylesheet" href="style.css" /><link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <nav>
-        <div class="logo">Irham</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+<body class="font-roboto bg-gray-50 text-gray-900 scroll-smooth">
+
+    <header id="navbar" class="w-full fixed top-0 left-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto flex justify-between items-center p-4">
+            <div class="logo font-mont text-2xl font-bold">Irham</div>
+
+            <button id="hamburger-btn" class="md:hidden z-50">
+                <i id="hamburger-icon" class="fa-solid fa-bars text-2xl"></i>
+            </button>
+            
+            <ul class="hidden md:flex gap-6 font-mont font-bold">
+                <li><a href="#home" class="px-3 py-2 rounded-md transition-colors duration-300 hover:bg-blue-500 hover:text-white">Home</a></li>
+                <li><a href="#about" class="px-3 py-2 rounded-md transition-colors duration-300 hover:bg-blue-500 hover:text-white">About</a></li>
+                <li><a href="#skills" class="px-3 py-2 rounded-md transition-colors duration-300 hover:bg-blue-500 hover:text-white">Skills</a></li>
+                <li><a href="#contact" class="px-3 py-2 rounded-md transition-colors duration-300 hover:bg-blue-500 hover:text-white">Contact</a></li>
             </ul>
+
+            <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-white">
+                <ul class ="flex flex-col items-center justify-center h-full gap-8 font-mont font-bold text-2xl">
+                    <li><a href="#home" class="mobile-link px-3 py-2 hover:text-blue-500">Home</a></li>
+                    <li><a href="#about" class="mobile-link px-3 py-2 hover:text-blue-500">About</a></li>
+                    <li><a href="#skills" class="mobile-link px-3 py-2 hover:text-blue-500">Skills</a></li>
+                    <li><a href="#contact" class="mobile-link px-3 py-2 hover:text-blue-500">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section id="home">
-            <div class="home-content">
-                <div class="text-home">
-                    <h1>Hi, <br>
-                        I'am Irham <br>
-                        Web Developer <br>
-                        <a class="btn btn-primary" href="#contact" role="button">Contact</a> <br>
-                        <img src="assets/linkedin.png" alt="">
-                        <img src="assets/github.png" alt="">
-                    </h1>
+    <main class="container mx-auto px-4 pt-1">
+
+    <section id="home" class="flex flex-col md:flex-row items-center gap-8 mt-12 min-h-screen">
+        <div class="text-home md:w-1/2 flex flex-col justify-center px-4 md:pl-30" data-aos="fade-right">
+            <h1 class="font-mont text-4xl md:text-5xl font-bold leading-tight">
+                Hi,<br>
+                I'am Irham<br>
+                Web Developer
+            </h1>
+            <a href="#contact">
+            <button class="bg-[#2D72FD] text-white px-4 py-2 w-24 rounded-md hover:bg-[#0E53DE] transition-colors duration-300 mt-5">
+            Contact
+            </button>
+            </a>
+
+            <div class="flex gap-4 mt-10">
+            <a href="https://linkedin.com" target="_blank">
+            <img src="assets/linkedin.png" alt="LinkedIn" class="w-8 h-8"/>
+            </a>
+                <a href="https://github.com" target="_blank">
+                <img src="assets/github.png" alt="GitHub" class="w-8 h-8"/>
+            </a>
+            </div>
+        </div>
+
+        <div class="image md:w-1/2 flex justify-center px-4" data-aos="fade-left">
+            <img src="assets/portfolio.png" alt="Portfolio" class="w-full max-w-lg h-auto"/>
+        </div>
+    </section>
+
+    <section id="about" class="mt-20 scroll-mt-24 min-h-screen">
+        <div id="about-text" class="text-center font-mont font-bold text-3xl mb-8" data-aos="fade-up">About</div>
+        <div class="about-content grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="about-text p-10 flex items-center bg-white shadow-lg rounded-lg w-full flex flex-col space-y-5" data-aos="fade-right">
+                <p class="font-roboto font-semibold ">
+                    I am a student at Institut Teknologi Sepuluh Nopember with a strong interest in Informatics, passionate in web development both frontend and backend, and eager to build innovative applications while continuously learning new technologies.
+                </p>
+                <p class="font-roboto text-slate-700">My goal is to create innovative applications that solve real-world problems while continuously learning new technologies, frameworks, and best practices. I thrive in collaborative environments, embrace challenges, and am always eager to contribute to projects that make a positive impact.</p>
+            </div>
+        <div class="about-image flex justify-center items-center" data-aos="fade-left">
+            <img src="assets/foto.jpeg" alt="About Image" class="w-64 md:w-80 h-auto rounded-md shadow-lg"/>
+        </div>
+        </div>
+    </section>
+
+    <section id="skills" class="mt-5 min-h-[60vh] scroll-mt-50" data-aos="fade-up">
+        <div class="container mx-auto max-w-6xl px-4">
+            <h2 class="mb-12 text-center text-4xl font-bold text-slate-900">Skills</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
+
+        <div class="rounded-2xl bg-white p-6 shadow-lg" data-aos="fade-up">
+            <h3 class="mb-4 text-xl font-semibold text-slate-800">Frontend</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">HTML</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">JS</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">CSS</span>
+            </div>
+        </div>
+        
+        <div class="rounded-2xl bg-white p-6 shadow-lg" data-aos="fade-up">
+            <h3 class="mb-4 text-xl font-semibold text-slate-800">Backend</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">PHP</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">MySQL</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">MongoDB</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">PostgreSQL</span>
+            </div>
+        </div>
+
+        <div class="rounded-2xl bg-white p-6 shadow-lg" data-aos="fade-up">
+            <h3 class="mb-4 text-xl font-semibold text-slate-800">Tooling</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">Git</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">VS Code</span>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <section id="contact" class="mt-30 mb-20 min-h-[60vh]" data-aos="fade-up">
+        <h2 class="mb-12 text-center text-4xl font-bold text-slate-900">Contact</h2>
+        <div class="container mx-auto max-w-5xl px-4">
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+
+        <div class="space-y-4 pt-2" data-aos="fade-right">
+            <svg class="h-10 w-10 text-slate-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91A2.25 2.25 0 012.25 6.993V6.75" />
+            </svg>
+            <h3 class="text-2xl font-semibold text-slate-900">
+            For commissions and project inquiries, please email:
+            </h3>
+            <a href="mailto:fazli.irham16@gmail.com" class="block text-lg font-medium text-indigo-600 hover:text-indigo-800">
+            fazli.irham16@gmail.com
+            </a>
+            <p class="text-base text-slate-600">or send a message via this form</p>
+        </div>
+        
+        <div data-aos="fade-left">
+            <form action="#" method="POST" class="space-y-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8">
+                <div>
+                    <label for="first-name" class="block text-sm font-medium text-slate-700">First Name</label>
+                    <input type="text" id="first-name" name="first-name" 
+                    class="mt-1 block w-full border-0 border-b-2 border-slate-400 bg-transparent p-1 focus:border-indigo-600 focus:ring-0">
                 </div>
-                <div class="image">
-                    <img src="assets/portfolio.png" alt="">
+                <div>
+                    <label for="last-name" class="block text-sm font-medium text-slate-700">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" 
+                        class="mt-1 block w-full border-0 border-b-2 border-slate-400 bg-transparent p-1 focus:border-indigo-600 focus:ring-0">
                 </div>
             </div>
-        </section>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-slate-700">Email *</label>
+                    <input type="email" id="email" name="email" required
+                    class="mt-1 block w-full border-0 border-b-2 border-slate-400 bg-transparent p-1 focus:border-indigo-600 focus:ring-0">
+                </div>
+            <div>
+                <label for="message" class="block text-sm font-medium text-slate-700">Write a message</label>
+                <textarea id="message" name="message" rows="3"
+                        class="mt-1 block w-full border-0 border-b-2 border-slate-400 bg-transparent p-1 focus:border-indigo-600 focus:ring-0"></textarea>
+            </div>
+                <div>
+                    <button type="submit" 
+                        class="rounded-lg bg-slate-700 px-7 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-600 transition-colors duration-300">
+                    Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2025 Irham. All rights reserved.</p>
+    <footer class="bg-white mt-5 shadow-inner">
+        <div class="container pl-5 py-5">
+            <p class="font-roboto text-sm">&copy; 2025 Irham. All rights reserved.</p>
+        </div>
     </footer>
-</body>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script>
+    AOS.init();
+
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+            navbar.classList.add("bg-white", "shadow-md");
+            navbar.classList.remove("bg-transparent");
+        } else {
+            if (!document.getElementById("mobile-menu").classList.contains("hidden")) {
+            } else {
+                navbar.classList.remove("bg-white", "shadow-md");
+                navbar.classList.add("bg-transparent");
+            }
+        }
+    });
+
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+    hamburgerBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        if (mobileMenu.classList.contains("hidden")) {
+            hamburgerIcon.classList.remove("fa-xmark");
+            hamburgerIcon.classList.add("fa-bars");
+
+            if (window.scrollY <= 20) {
+                navbar.classList.remove("bg-white", "shadow-md");
+                navbar.classList.add("bg-transparent");
+            }
+        } else {
+            hamburgerIcon.classList.remove("fa-bars");
+            hamburgerIcon.classList.add("fa-xmark");
+            navbar.classList.add("bg-white", "shadow-md");
+            navbar.classList.remove("bg-transparent");
+        }
+    });
+    
+    mobileLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            hamburgerIcon.classList.remove("fa-xmark");
+            hamburgerIcon.classList.add("fa-bars");
+
+            if (window.scrollY <= 20) {
+                navbar.classList.remove("bg-white", "shadow-md");
+                navbar.classList.add("bg-transparent");
+            }
+        });
+    });
+
+    </script>
+
 </body>
 </html>
