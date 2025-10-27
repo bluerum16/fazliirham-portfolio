@@ -37,9 +37,48 @@ nav ul li a {
     font-family: "mont";
 }
 
+main {
+    display: grid;
+    gap: 50px;
+    padding: 30px;
+}
+
+#home {
+    display: flex;
+    height: 75%;
+}
+
+.home-content {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+}
+
+.home-content .text-home h1 {
+    font-family: "mont";
+    padding: 130px;
+    font-size: 3rem;
+    padding-top: 120px;
+}
+
+.home-content .text-home img {
+    margin-top: 30px;
+    width: 30px;
+}
+
+.home-content .image img {
+    width: 600px;
+    height: auto;
+    margin-top: -100px;
+}
+
+footer {
+    padding: 1rem;
+}
+
 footer p {
     font-family: "roboto";
     font-size: small;
-
 }
 
